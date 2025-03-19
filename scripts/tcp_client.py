@@ -1,4 +1,5 @@
 import socket
+import time
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -17,5 +18,6 @@ try:
     print(f"Received: {data.decode()}")
 
 finally:
+    time.sleep(0.5)
     client_socket.close()
 
